@@ -26,7 +26,7 @@ Note that there are green diagonal lines on the top and bottom in the z-directio
 
 Note also that the fields are highly concentrated inside the pillar - This is due to the **resonances** occurring due to the subwavelength nature of the pillars (source wavelength is 1550 nm. Max pillar diameter is 500 nm). The behavior of the plane wave going out of the pillar matches the behavior coming out of it, but a phase shift has occurred.
 
-![diagram](references/single_pillar_diagram.png)
+![diagram](references/diagram.png)
 
 Next, the script displays an image with the phase and transmission characteristics, which should agree with Fig. 3 of [the Raeker paper](![raeker](/references/RAEKER_2021.pdf)).
 
