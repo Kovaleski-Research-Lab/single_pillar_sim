@@ -28,7 +28,7 @@ Note also that the fields are highly concentrated inside the pillar - This is du
 
 ![diagram](references/diagram.png)
 
-Next, the script displays an image with the phase and transmission characteristics, which should agree with Fig. 3 of [the Raeker paper](![raeker](/references/RAEKER_2021.pdf)).
+Next, the script displays an image with the phase and transmission characteristics, which should agree with Fig. 3 of  [the Raeker paper](references/RAEKER_2021.pdf).
 
 - How does phase delay change with pillar radius? Why might this be beneficial?
 - Why do you think we want high transmission?
