@@ -3,6 +3,9 @@ import matplotlib.pyplot as plt
 from IPython.display import Video, display
 import numpy as np
 import cv2
+import re
+import os
+from PIL import Image
 
 def create_folder(path):
 
@@ -28,11 +31,50 @@ def display_fields(params, sim, rad):
     plot_plane = mp.Volume(center=mp.Vector3(0,0.0*params['cell']['y'], 0),
                             size=mp.Vector3(params['cell']['x'], 0, params['cell']['z']))
     sim.plot2D(output_plane=plot_plane, fields=params['source']['cmpt'])
-    plt.title(f"Fields at radius = {rad} micron")
-    plt.savefig('vis/fields.png')
+    plt.title(f"Fields at radius = {rad:.3f} micron")
+    plt.savefig(f'vis/fields_{rad:.3f}.png')
 
     if mp.am_master():
-        plt.show()
+    #    plt.show()
+        plt.close("all")
+
+
+def combine_subplots():
+
+    dir_path = os.listdir("vis")
+    radii = []
+    image_files = []
+
+    pattern = re.compile(r'fields_(\d+\.\d+)\.png')
+
+    for f in dir_path:
+
+        if f.endswith(".png"):
+       
+            image_files.append(f)
+ 
+            match = pattern.match(f)
+            if match:
+                # Extract the number and convert it to an integer
+                num = float(match.group(1))
+                # Append the number to the list
+                radii.append(num) 
+
+    radii.sort()
+    image_files.sort()
+
+    fig, ax = plt.subplots(1, len(radii), figsize=(4*len(radii), 8))
+
+    for axis, image_file in zip(ax, image_files):
+
+        image = Image.open(os.path.join("vis",image_file))
+        axis.imshow(image)
+        axis.axis('off')
+        
+    plt.tight_layout()
+
+    plt.show()
+
 
 def mod_axes(ax, rad):
 
@@ -91,6 +133,7 @@ def display_chars(params, data):
     flux_list = data[1]
     phase_list = data[2] 
 
+    print("display chars func")
     plt.style.use('seaborn-v0_8')
     
     tickfontsize=12
