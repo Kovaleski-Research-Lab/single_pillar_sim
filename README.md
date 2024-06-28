@@ -2,20 +2,24 @@
 
 This experiment lets us characterize a single meta-atom pillar under local phase approximation. We are repeating the experiment conducted in [this journal paper](references/RAEKER_2021.pdf), Fig. 3.
 
-The experiment simulates a high-index meta-atom pillar on top of a glass (fused silica) substrate embedded in PDMS, a flexible plastic material. The 3D simulation is run `experiment.num` number of times, with the pillar radius increasing from 75 nm to 250 nm with each iteration.
+The experiment simulates a high-index meta-atom pillar on top of a glass (fused silica) substrate embedded in PDMS, a flexible plastic material (As modeled in Fig 3.a of the journal paper referenced above). The 3D simulation is run `experiment.num` number of times, with the pillar radius increasing from 75 nm to 250 nm with each iteration.
 
 At the end of each simulation, transmission and phase information are recorded by means of a flux monitor.
 
 ### Run the experiment
 
-Open the file, `Global-Lab-Repo/sops/meep/single_pillar/configs.yaml, and set the following parameters:
+Create a [fork](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo#forking-a-repository) of this repository. This requires you to have your own GitHub account. Once you've created the fork, you'll need to clone it to your local computer. If you are following the lab's recommended file directory structure, you'll navigate in a terminal to `documents/code` and run
+```
+git clone {url to your forked repository}
+```
+Once the repository is cloned open the file, `single_pillar_sim/configs.yaml`, in an editor and set the following parameters:
 
     - animate : 0
     - resolution : 20
     
 - Dont forget to save if you make any changes (`:w` if you're using the vim editor).
 
-In your terminal, with the `mpi_meep` environment activated,  navigate back to `Gloabl-Lab-Repo/sops/meep/single_pillar` and run
+In your terminal, with the `mpi_meep` environment activated (If you haven't followed [this tutorial]() yet, stop and do that now),  navigate back to `Gloabl-Lab-Repo/sops/meep/single_pillar` and run
 ```
 python3 main.py -config configs.yaml
 ```
