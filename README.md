@@ -26,7 +26,7 @@ python3 main.py -config configs.yaml
 
 Once the simulations are finished, the script should display an image showing a snapshot of the final pillar in its simulation environment, with fields shown. It should look somewhat like the image in the figure below. The sinusoidal electric field is symbolized by red - negative fields moving into the screen, and blue - positive fields moving out of the screen. The red line represents the source, and the blue line represents the flux monitor (The plane at which we collect phase and transmission information).
 
-Note that there are green diagonal lines on the top and bottom in the z-direction. This represents PML, perfectly matching layers, which are absorbing boundary condtions. In x and y we have repeating boundary conditions. 
+Note that there are green diagonal lines on the top and bottom in the z-direction. This represents PML, perfectly matching layers, which are absorbing boundary conditions. In x and y we have repeating boundary conditions. 
 
 Note also that the fields are highly concentrated inside the pillar - This is due to the **resonances** occurring due to the subwavelength nature of the pillars (source wavelength is 1550 nm. Max pillar diameter is 500 nm). The behavior of the plane wave going out of the pillar matches the behavior coming out of it, but a phase shift has occurred.
 
