@@ -24,7 +24,7 @@ In your terminal, with the `mpi_meep` environment activated (If you haven't foll
 python3 main.py -config configs.yaml
 ```
 
-Once the simulations are finished, the script should display an image showing a snapshot of the final pillar in its simulation environment, with fields shown. It should look somewhat like the image in the figure below. The sinusoidal electric field is symbolized by red - negative fields moving into the screen, and blue - positive fields moving out of the screen. The red line represents the source, and the blue line represents the flux monitor (The plane at which we collect phase and transmission information).
+Once the simulations are finished, the script should display an image showing a snapshot of the final pillar in its simulation environment, with fields shown. It should look somewhat like the image in the figure below, which shows an x-z slice of the 3D simulation cell. The sinusoidal electric field is symbolized by red - negative fields moving into the screen, and blue - positive fields moving out of the screen. The red line represents the source, and the blue line represents the flux monitor (The plane at which we collect phase and transmission information).
 
 Note that there are green diagonal lines on the top and bottom in the z-direction. This represents PML, perfectly matching layers, which are absorbing boundary conditions. In x and y we have repeating boundary conditions. 
 
