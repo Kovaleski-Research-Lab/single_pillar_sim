@@ -12,7 +12,7 @@ Create a [fork](https://docs.github.com/en/pull-requests/collaborating-with-pull
 ```
 git clone {url to your forked repository}
 ```
-Once the repository is cloned open the file, `single_pillar_sim/configs.yaml`, in an editor and set the following parameters:
+Once the repository is cloned, open the file, `single_pillar_sim/configs.yaml`, in an editor and set the following parameters:
 
     - animate : 0
     - resolution : 20
