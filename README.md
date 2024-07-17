@@ -47,3 +47,4 @@ Next, the script displays an image with the phase and transmission characteristi
   mpirun -np {num_cores} python3 main.py -config configs.yaml
   ```
     - If you're not sure how many cores are available, try running `htop` in any terminal.
+    - If you want to determine the optimal number of cores to use for your simulation, you can consult [this core study](https://github.com/Kovaleski-Research-Lab/general_3x3/tree/andy_branch/supplementary/core_study) as a starting point.
