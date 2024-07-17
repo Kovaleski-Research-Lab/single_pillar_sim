@@ -39,7 +39,7 @@ Next, the script displays an image with the phase and transmission characteristi
 
   ## A few things to try while you're exploring this code:
 
-- Change `experiment.animate` to 1. Rerun the script. Now it will display an animation showing the electric field as the wave propagates through the pillar.
+- Back in the config file, change `experiment.animate` to 1. Rerun the script. Now it will display an animation showing the electric field as the wave propagates through the pillar.
 - Change `experiment.animate` back to 0. Try changing the resolution to 10 by changing `resolution` in the config file. What happens? Why do you think this is? Now try changing the resolution to 30 or 40. What happens now?
 - You can press Ctrl+c to cancel the script if it's taking way too long to run. Running higher resolution simulations gets computationally expensive, so we use parallel meep to speed things up by distributing the computation among multiple CPU cores. To run the script with parallel meep, use:
  
