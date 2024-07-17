@@ -19,7 +19,7 @@ Once the repository is cloned, open the file, `single_pillar_sim/configs.yaml`, 
     
 - Dont forget to save if you make any changes (`:w` if you're using the vim editor).
 
-In your terminal, with the `mpi_meep` environment activated (If you haven't followed [this tutorial]() yet, stop and do that now),  navigate back to `Gloabl-Lab-Repo/sops/meep/single_pillar` and run
+In your terminal, with the `mpi_meep` environment activated (If you haven't followed [this tutorial](https://github.com/Kovaleski-Research-Lab/Global-Lab-Repo/blob/main/sops/meep/get_started_meep.md) yet, stop and do that now),  navigate back to `Gloabl-Lab-Repo/sops/meep/single_pillar` and run
 ```
 python3 main.py -config configs.yaml
 ```
